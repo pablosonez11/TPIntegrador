@@ -9,7 +9,7 @@ import { IAlumno } from '../models/ialumno.alumno';
 })
 
 export class VisualidorDeEntidadComponent  {
-@Input() listaAlumnos: IAlumno;
+@Input() unAlumno: IAlumno;
 }
 
 
