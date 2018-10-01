@@ -3,6 +3,7 @@ import { IAlumno } from './models/ialumno.alumno';
 import { _document } from '@angular/platform-browser/src/browser';
 import { IDocente } from './models/idocente.docente';
 import { Icurso } from './models/icurso.curso';
+import { AlumnoComponent } from './alumno/alumno.component';
 
 @Component({
   selector: 'app-root',
