@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IAlumno } from '../models/ialumno.alumno';
+import { AlumnoComponent } from '../alumno/alumno.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { IAlumno } from '../models/ialumno.alumno';
 })
 
 export class VisualidorDeEntidadComponent  {
-@Input() unAlumno: IAlumno;
+  @Input() listadoAlumnos: Array<IAlumno>;
+
 }
 
 

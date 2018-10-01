@@ -7,3 +7,8 @@
 </div>
 <app-visualidor-de-entidad></app-visualidor-de-entidad>
 
+<ul>
+  <li *ngFor="let alumno of unAlumno">
+  <app-alumno [unAlumno] = "alumno" ></app-alumno>
+  </li>
+</ul>
