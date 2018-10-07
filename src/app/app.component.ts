@@ -1,38 +1,44 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IAlumno } from './models/ialumno.alumno';
 import { _document } from '@angular/platform-browser/src/browser';
 import { IDocente } from './models/idocente.docente';
-import { Icurso } from './models/icurso.curso';
+import { ICurso } from './models/icurso.curso';
 import { AlumnoComponent } from './alumno/alumno.component';
+import { EstadoCurso } from './estado-curso.enum';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'tpIntegrador';
 
-  constructor(
+  public unDocente: IDocente;
+  public unCurso: ICurso;
+  public unAlumno: IAlumno;
 
-  ) {}
-  unAlumno: IAlumno = {
+  constructor() {
+    this.unAlumno = {
     nombre: 'juan',
     apellido: 'villa',
     documento: 23333333,
     legajo: 34433
-  };
+    };
 
-  unDocente: IDocente = {
-    nombreDocente: 'Charly',
-    apellidoDocente: 'Gomez'
-  };
+    this.unDocente = {
+      nombreDocente: 'Charly',
+      apellidoDocente: 'Gomez'
+    };
 
-  unCurso: Icurso = {
-    nombreCurso: 'Angular Cli',
-    horario: '19hs-22hs'
-  };
+    this.unCurso = {
+      nombreCurso: 'Angular Cli',
+      horario: '19hs-22hs',
+      estadoCurso: EstadoCurso.activo
+    };
 
+  }
 
 }
 

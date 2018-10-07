@@ -7,10 +7,11 @@ import { IAlumno } from '../models/ialumno.alumno';
   styleUrls: ['./alumno.component.css']
 })
 export class AlumnoComponent implements OnInit {
-  @Input() listadoAlumnos: Array<IAlumno>;
+  @Input() unAlumno: IAlumno;
 
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {}
 

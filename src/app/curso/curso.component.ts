@@ -1,29 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ICurso } from '../models/icurso.curso';
 
 @Component({
   selector: 'app-curso',
   templateUrl: './curso.component.html',
   styleUrls: ['./curso.component.css']
 })
-export class CursoComponent  {
+export class CursoComponent implements OnInit  {
+@Input() unCurso: ICurso;
 
+constructor() {
+}
 
-  private _nombreCurso: string;
-  public get nombreCurso(): string {
-    return this._nombreCurso;
-  }
-  public set nombreCurso(_nombreCurso: string) {
-    this._nombreCurso = this.nombreCurso;
-  }
-
-
-  private _horario: string;
-  public get horario(): string {
-    return this._horario;
-  }
-  public set horario(_horario: string) {
-    this._horario = this.horario ;
-  }
-
+ngOnInit() {}
 
 }
